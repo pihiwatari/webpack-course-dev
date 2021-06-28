@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Al igual que con el js, eliminamos el enlace al archivo de css, porque webpack lo va a crear en automatico -->
+    <!-- <link rel="stylesheet" href="../src/styles/main.css" /> -->
+    <title>JS Portfolio</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../src/styles/main.css">
-  <title>JS Portfolio</title>
-</head>
-
-<body>
-  <div id="main"></div>
-  <script type="module" src="../src//index.js"></script>
-</body>
-
+  <body>
+    <div id="main"></div>
+    <!-- Cuando procesamos el html con webpack, no necesitamos decirle al html que use el script de js, webpack lo inyecta al momento de compilar y prepara el archivo para que lo lea -->
+    <!-- <script type="module" src="../src//index.js"></script> -->
+  </body>
 </html>
