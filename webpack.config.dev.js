@@ -7,8 +7,6 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 const miniCSSExtractPlugin = require("mini-css-extract-plugin");
 //creamos una nueva instancia del plugin de copiado de archivos para webpack
 const copyPlugin = require("copy-webpack-plugin");
-//importamos el plugin de css minimizer
-const CSSMinimizerPlugin = require("css-minimizer-webpack-plugin");
 //importamos el plugin de dotenv para manejar variables de entorno en webpack
 const Dotenv = require("dotenv-webpack");
 
@@ -28,6 +26,9 @@ module.exports = {
     //supongo que esto le dice a webpack hacia donde y como queremos que mueva las imagenes (lo hace por defecto, pero le decimos esta regla para que respete nuestra extructura)
     assetModuleFilename: "assets/images/[hash][ext][query]",
   },
+  //agregamos el atributo mode: development, para correr npm run dev
+  mode: "development",
+
   //resolve nos permite definir que atributos va a trabajar webpack
   resolve: {
     //extensiones de los archivos que webpack va a procesar.
@@ -130,12 +131,4 @@ module.exports = {
     //llamamos el plugin de dotenv
     new Dotenv(),
   ],
-  //habilitamos el apartado de "optimization", para minimizar nuestro codigo usando plugins minificadores
-  //terser plugin ya se encuentra instalado por defecto
-  optimization: {
-    //le decimos a webpack que optimize nuestro codigo y lo minifique
-    minimize: true,
-    //pasamos un arreglo con los minificadores que vamos a utilizar en nuestro bundle.
-    minimizer: [new CSSMinimizerPlugin()],
-  },
 };
