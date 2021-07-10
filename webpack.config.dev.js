@@ -28,7 +28,9 @@ module.exports = {
   },
   //agregamos el atributo mode: development, para correr npm run dev
   mode: "development",
+  //agregamos el modo watch para que este vigilando los cambios y realizar compilacion con cada guardado
 
+  watch: true,
   //resolve nos permite definir que atributos va a trabajar webpack
   resolve: {
     //extensiones de los archivos que webpack va a procesar.
