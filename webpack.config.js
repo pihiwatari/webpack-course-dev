@@ -27,6 +27,8 @@ module.exports = {
     filename: "[name].[contenthash].js",
     //supongo que esto le dice a webpack hacia donde y como queremos que mueva las imagenes (lo hace por defecto, pero le decimos esta regla para que respete nuestra extructura)
     assetModuleFilename: "assets/images/[hash][ext][query]",
+    //con el flag clean limpiamos la carpeta 'dist'
+    clean: true,
   },
   //resolve nos permite definir que atributos va a trabajar webpack
   resolve: {

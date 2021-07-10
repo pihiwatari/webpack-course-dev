@@ -1,0 +1,5 @@
+#Comandos basicos para deploy en Netlify
+
+[build]
+  publish = "dist"
+  command = "npm run build"
